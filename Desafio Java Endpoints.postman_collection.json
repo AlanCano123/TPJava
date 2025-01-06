@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "b81b344e-7163-4734-88fe-ad0b60641b06",
+		"name": "Desafio Java Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10972716"
+	},
+	"item": [
+		{
+			"name": "Puntos",
+			"item": [
+				{
+					"name": "1-Listar Puntos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Formosa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/puntos"
+					},
+					"response": []
+				},
+				{
+					"name": "2-Crear Punto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Formosa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/puntos"
+					},
+					"response": []
+				},
+				{
+					"name": "3-Actualizar Punto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Misiones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/puntos/update/11"
+					},
+					"response": []
+				},
+				{
+					"name": "4-Eliminar Punto",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Costos",
+			"item": [
+				{
+					"name": "1-Crear Costo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ida\": 1,\r\n    \"vuelta\":5,\r\n    \"costo\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/costos"
+					},
+					"response": []
+				},
+				{
+					"name": "2-Eliminar Costo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/costos/delete/1/5"
+					},
+					"response": []
+				},
+				{
+					"name": "3-Ver rutas directas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/costos/rutas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "4-Ver costo minimo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/costos/minimo?ida=1&vuelta=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"costos",
+								"minimo"
+							],
+							"query": [
+								{
+									"key": "ida",
+									"value": "1"
+								},
+								{
+									"key": "vuelta",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Acreditaciones",
+			"item": [
+				{
+					"name": "Crear Acreditacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"importe\": 1500.50,\r\n  \"puntoVentaId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/acreditaciones"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Acreditaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/acreditaciones"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
